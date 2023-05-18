@@ -13,6 +13,7 @@ public class PlayerControl : MonoBehaviour
 
     private float xInput;
     private int count;
+    private int pickUpCount;
     private float zInput;
     public CharacterController playerController;
     private Vector3 moveDirection;
@@ -20,8 +21,10 @@ public class PlayerControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        pickUpCount = 0;
         playerController = GetComponent<CharacterController>();
         count = 0;
+        FindObjectOfType<GameManager>().setCountText(pickUpCount);
 
         setCountText();
         winTextObject.SetActive(false);
@@ -37,7 +40,7 @@ public class PlayerControl : MonoBehaviour
     void setCountText()
     {
         countText.text = "Count: " + count.ToString();
-        if(count >= 11)
+        if (count >= 11)
         {
             winTextObject.SetActive(true);
         }
@@ -55,9 +58,10 @@ public class PlayerControl : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             count = count + 1;
+            FindObjectOfType<GameManager>().setCountText(pickUpCount); //Tell the Game Manager to update the score text
 
             setCountText();
         }
-       
+      
     }
 }
