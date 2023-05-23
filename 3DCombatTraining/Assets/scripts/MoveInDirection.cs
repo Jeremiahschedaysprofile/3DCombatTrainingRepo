@@ -4,7 +4,7 @@ using UnityEngine;
 public class MoveInDirection : MonoBehaviour
 {
     public float speed = 4;
-    private float seconds = 0;
+    //private float seconds = 0;
     public MovementPattern movementPattern = MovementPattern.NormalForward;
     public float movementBuffer = .5f;
     private Vector3 moveDirection;

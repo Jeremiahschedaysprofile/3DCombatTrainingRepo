@@ -21,12 +21,14 @@ public class Damage : MonoBehaviour
             case UnitType.Enemy:
                 if (target.CompareTag("Enemy"))
                 {
+                    Debug.Log($"{gameObject.name} hit {target.name}");
                     DealDamage(target.gameObject);
                 }
                 break;
             case UnitType.Player:
                 if (target.CompareTag("Player"))
                 {
+                    Debug.Log($"{gameObject.name} hit {target.name}");
                     DealDamage(target.gameObject);
                 }
                 break;
