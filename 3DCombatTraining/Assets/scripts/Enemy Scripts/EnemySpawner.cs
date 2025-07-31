@@ -9,7 +9,7 @@ public class EnemySpawner : MonoBehaviour
 
     [SerializeField] private float spawnRangeX = 8.5f; //The possible x range enemies can spawn
     [SerializeField] private float spawnRangeZ = 8.5f; //The possible z range enemies can spawn
-    [SerializeField] private float spawnInterval = 5.0f;      //The amount of time in between spawning a new enemy
+    [SerializeField] private float spawnInterval = 5.0f; //The amount of time in between spawning a new enemy
 
 
     // Start is called before the first frame update
